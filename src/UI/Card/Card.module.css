@@ -1,0 +1,23 @@
+/* .card_container {
+  border: pink solid 2px;
+} */
+.card_header {
+  padding: 0 0.6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+}
+.train_info {
+  padding: 0.6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* .train_class{
+
+} */
+.book {
+  margin: auto;
+}

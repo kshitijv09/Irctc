@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+/* .search_section {
+  width: 50%;
+  margin: 40px 2em;
+} */
+.search_section {
+  margin-top: 2em;
+}
+.search_heading {
+  text-align: center;
+  color: darkblue;
+  padding-top: 0.7em;
+}
+.icon {
+  /* border: red dotted; */
+  justify-content: center;
+  padding-left: 6em;
+  border: green solid 2px;
+  margin-bottom: 1.5em;
+}
+.date-picker {
+  border: aqua solid 2px;
+}
+.datepicker_container {
+  border: pink solid 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+.dropdown_Container {
+  border: red dotted 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .datepicker,
+.datepicker > div.react-datepicker-wrapper,
+.datepicker
+  > div
+  > div.react-datepicker__input-container
+  .datepicker
+  > div
+  > div.react-datepicker__input-container
+  input {
+  width: 100%;
+} */
+.tagline_section {
+  width: 30%;
+  margin: 14em 2em 5em 20em;
+
+  align-items: center;
+
+  padding-left: 5em;
+}
+.tagline_text {
+  margin: auto;
+  width: 100%;
+  align-items: center;
+}
+.search_input {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 2em;
+  /* justify-content: space-evenly; */
+}
+/* .search_input div {
+  border: pink solid 2px;
+  margin-top: 1.1em;
+  margin-left: 1px;
+} */

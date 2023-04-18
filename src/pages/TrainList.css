@@ -1,0 +1,8 @@
+.train-list {
+  border: green solid 2px;
+  margin: 2em;
+}
+.train-container {
+  border: goldenrod solid 2px;
+  margin: 2em 0;
+}
