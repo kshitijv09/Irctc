@@ -48,11 +48,11 @@ const data = {
   ],
 };
 export default function TrainList() {
-  //const data = useLoaderData();
+  const data = useLoaderData();
   const { currentUser } = useAuth();
 
-  /*const { fromStation, toStation } = useStation();
-   */
+  //const { fromStation, toStation } = useStation();
+
   const [train, setTrain] = useState("Utsarg");
 
   const location = useLocation();
@@ -61,10 +61,10 @@ export default function TrainList() {
 
   console.log(location);
 
-  /*  useEffect(() => {
+  useEffect(() => {
     console.log("IN train list", fromStation);
     console.log("In train list", toStation);
-  }, [fromStation, toStation]); */
+  }, [fromStation, toStation]);
 
   const dataStoreHandler = async (TrainData) => {
     //event.preventDefault();
@@ -127,7 +127,7 @@ export default function TrainList() {
   );
 }
 
-/* export async function loader() {
+export async function loader() {
   const options = {
     method: "GET",
     url: "https://irctc1.p.rapidapi.com/api/v2/trainBetweenStations",
@@ -146,7 +146,7 @@ export default function TrainList() {
   }
 }
 
-train_number:"12545"
+/*train_number:"12545"
 train_name:"Karmbhoomi Exp"
 train_type:"M"
 run_days:

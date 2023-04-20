@@ -23,7 +23,7 @@ function App() {
     {
       path: "/trainlist",
       element: <TrainList />,
-      /* loader: trainlistLoader, */
+      loader: trainlistLoader,
     },
     {
       path: "/dashboard",

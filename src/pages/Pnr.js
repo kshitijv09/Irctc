@@ -8,7 +8,7 @@ import "./Pnr.css";
 
 export default function Pnr() {
   const [num, enterNum] = useState("");
-  const [PNR, setPNR] = useState(4147107547);
+  const [PNR, setPNR] = useState("4147107547");
   const [details, setPNRdetails] = useState(null);
 
   const [loading, setLoading] = useState(false);

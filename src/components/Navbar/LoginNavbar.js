@@ -46,7 +46,7 @@ function LoginNavBar(props) {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="success">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -63,6 +63,7 @@ function LoginNavBar(props) {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              backgroundColor: "primary",
             }}
           >
             LOGO
