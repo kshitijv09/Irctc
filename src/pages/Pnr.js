@@ -3,20 +3,23 @@ import ResponsiveAppBar from "../components/Navbar/Navbar";
 import axios from "axios";
 import { TextField, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import PnrDetails from "../components/PnrDetails/PnrDetails";
+import "./Pnr.css";
 
 export default function Pnr() {
   const [num, enterNum] = useState("");
-  const [PNR, setPNR] = useState("8531575878");
-  const [details, setPNRdetails] = useState("");
+  const [PNR, setPNR] = useState(4147107547);
+  const [details, setPNRdetails] = useState(null);
 
   const [loading, setLoading] = useState(false);
-  //8531575878
   const pnrHandler = (event) => {
     enterNum(event.target.value);
   };
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
     setPNR(num);
+    console.log(num);
+    console.log(PNR);
     setLoading(true);
   };
   async function PNRenquiry() {
@@ -32,7 +35,6 @@ export default function Pnr() {
     const response = await axios.request(options);
     if (!response.ok) {
       setPNRdetails(response.data);
-      //return response.data;
     } else {
       console.log(response.status);
     }
@@ -40,15 +42,16 @@ export default function Pnr() {
   useEffect(() => {
     PNRenquiry();
   }, [PNR]);
+
   return (
     <div>
       <ResponsiveAppBar />
-      <form onSubmit={submitHandler} className="input">
+      <form onSubmit={submitHandler} className="input-container">
         <TextField
           className="input"
-          size="small"
-          label="Location"
-          variant="filled"
+          size="large"
+          label="PNR"
+          variant="outlined"
           color="success"
           focused
           onChange={pnrHandler}
@@ -71,31 +74,7 @@ export default function Pnr() {
           Search
         </Button>
       </form>
-      loading &&
-      <div /* className={classes.container} */>
-        <h1>
-          PNR status:{details.status},{details.code},{details.message},
-          {details.message}
-        </h1>
-      </div>
+      {loading && <PnrDetails details={details} />}
     </div>
   );
-}
-
-export async function loader() {
-  const options = {
-    method: "GET",
-    url: "https://pnr-status-indian-railway.p.rapidapi.com/pnr-check/8531575878",
-    headers: {
-      "X-RapidAPI-Key": "f89a1dec92msh2a7baa3bc8a2957p15c76bjsnec69fdaf1b39",
-      "X-RapidAPI-Host": "pnr-status-indian-railway.p.rapidapi.com",
-    },
-  };
-
-  const response = await axios.request(options);
-  if (!response.ok) {
-    return response.data;
-  } else {
-    console.log(response.status);
-  }
 }

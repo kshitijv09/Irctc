@@ -6,3 +6,7 @@
   border: goldenrod solid 2px;
   margin: 2em 0;
 }
+.btn {
+  /* border: aqua 20px solid; */
+  padding-left: 0.6em;
+}

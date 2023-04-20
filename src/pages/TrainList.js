@@ -96,7 +96,7 @@ export default function TrainList() {
               <Box>
                 <Card train={train} />
               </Box>
-              <div>
+              <div className="btn">
                 <Button
                   onClick={() => dataStoreHandler(train)}
                   style={{ backgroundColor: "orange" }}

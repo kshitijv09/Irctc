@@ -36,15 +36,9 @@ export default function Card({ train }) {
           </div>
         </div>
         <div className={classes.train_class}>
-          <Box>
-            {train.class_type.map((coach) => {
-              return (
-                <>
-                  <span>{coach}</span>
-                </>
-              );
-            })}
-          </Box>
+          {train.class_type.map((coach) => {
+            return <button className={classes.coach_container}>{coach}</button>;
+          })}
         </div>
         {/* <div className={classes.book}>
           <Button>Book</Button>

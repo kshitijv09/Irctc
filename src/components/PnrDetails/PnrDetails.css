@@ -1,0 +1,78 @@
+.container {
+  border: red solid 2px;
+  width: 60%;
+  margin: auto;
+}
+.heading {
+  width: 70%;
+  margin: 2em auto;
+  text-align: center;
+  background-color: rgb(51, 122, 183);
+  color: white;
+  padding: 0.6rem;
+  /*  margin: 2em 0; */
+}
+
+.info-container {
+  border: aqua solid 4px;
+  width: 70%;
+  margin: auto;
+}
+.train-info {
+  font-size: 1.2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  border: green solid 2px;
+  margin: 2em 0;
+}
+.passenger-group {
+  border: blue solid 2px;
+  width: 100%;
+  margin: auto;
+  font-size: 1.2em;
+}
+.passenger-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+.passenger-head {
+  border: green solid 2px;
+  background-color: rgb(51, 122, 183);
+  color: white;
+}
+.passenger-container {
+  display: flex;
+  flex-direction: column;
+  border: green solid 2px;
+}
+.passenger-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  /* border: green solid 2px; */
+}
+
+.grp {
+  border: pink solid 2px;
+  text-align: center;
+  padding: 0em 0em;
+}
+.head {
+  width: 100%;
+  border: red solid 2px;
+  background-color: rgb(51, 122, 183);
+  color: white;
+  margin-bottom: 10px;
+}
+.body {
+  padding-bottom: 10px;
+}
+.passenger-detail {
+  border: green solid 2px;
+  padding: 10px;
+}
