@@ -23,6 +23,7 @@ export default function Pnr() {
     setLoading(true);
   };
   async function PNRenquiry() {
+    console.log("PNR no is" + PNR);
     const options = {
       method: "GET",
       url: `https://pnr-status-indian-railway.p.rapidapi.com/pnr-check/${PNR}`,

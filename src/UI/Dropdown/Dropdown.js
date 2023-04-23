@@ -6,10 +6,10 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function Dropdown() {
-  const [age, setAge] = React.useState("");
+  const [classes, setClass] = React.useState("");
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setClass(event.target.value);
   };
 
   return (
@@ -21,16 +21,20 @@ export default function Dropdown() {
         <Select
           labelId="demo-simple-select-helper-label"
           id="demo-simple-select-helper"
-          value={age}
+          value={classes}
           label="All Classes"
           onChange={handleChange}
         >
-          <MenuItem value="">
-            <em>None</em>
+          <MenuItem value={0}>
+            <em>All Classes</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={10}>AC First Class (1A)</MenuItem>
+          <MenuItem value={20}>AC 2 Tier (2A)</MenuItem>
+          <MenuItem value={30}>Exec Chair Car (CC)</MenuItem>
+          <MenuItem value={40}>AC 3 Tier (3A)</MenuItem>
+          <MenuItem value={50}>AC Chair Car (CC)</MenuItem>
+          <MenuItem value={60}>Sleeper (SL)</MenuItem>
+          <MenuItem value={70}>Second Sitting (2S)</MenuItem>
         </Select>
       </FormControl>
     </div>

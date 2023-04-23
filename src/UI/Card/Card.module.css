@@ -22,7 +22,7 @@
   margin: auto;
 }
 .train_class {
-  border: red solid 2px;
+  /*  border: red solid 2px; */
   width: 50%;
   /*  padding: 0.6em; */
   padding-left: 0.6em;

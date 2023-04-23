@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { StationProvider } from "./context/StationContext";
 
-import { loader as trainlistLoader } from "./pages/TrainList";
+import { Loader as trainlistLoader } from "./pages/TrainList";
 import SignUp from "./pages/SignUp";
 import Home from "./components/Home/Home";
 import LogIn from "./pages/LogIn";
@@ -23,7 +23,7 @@ function App() {
     {
       path: "/trainlist",
       element: <TrainList />,
-      loader: trainlistLoader,
+      /* loader: trainlistLoader, */
     },
     {
       path: "/dashboard",

@@ -10,13 +10,22 @@ import Dropdown from "../../UI/Dropdown/Dropdown";
 export default function SearchTrains() {
   const [ArrivalStation, setArrivalStation] = useState();
   const [DestinationStation, setDestinationStation] = useState();
+  const [travelDate, setTravelDate] = useState();
+
   const navigate = useNavigate();
 
   const submitHandler = (event) => {
     event.preventDefault();
     navigate("/trainlist", {
-      state: { fromS: ArrivalStation, toS: DestinationStation },
+      state: {
+        fromS: ArrivalStation,
+        toS: DestinationStation,
+        date: travelDate,
+      },
     });
+  };
+  const changeDate = (date) => {
+    setTravelDate(date);
   };
 
   return (
@@ -36,6 +45,7 @@ export default function SearchTrains() {
                       inputProps={{
                         style: {
                           height: "10px",
+                          border: "black solid 1px",
                         },
                       }}
                       InputLabelProps={{ style: { color: "darkblue" } }}
@@ -45,7 +55,10 @@ export default function SearchTrains() {
                     />
                   </div>
                   <div className={classes.datepicker}>
-                    <Datepicker wrapperClassName="date-picker" />
+                    <Datepicker
+                      wrapperClassName="date-picker"
+                      newDate={changeDate}
+                    />
                   </div>
                 </div>
                 <div className={classes.icon}>
@@ -63,6 +76,7 @@ export default function SearchTrains() {
                       inputProps={{
                         style: {
                           height: "10px",
+                          border: "black solid 1px",
                         },
                       }}
                       InputLabelProps={{ style: { color: "darkblue" } }}

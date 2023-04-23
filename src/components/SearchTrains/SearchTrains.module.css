@@ -18,21 +18,21 @@
   /* border: red dotted; */
   justify-content: center;
   padding-left: 6em;
-  border: green solid 2px;
+  /* border: green solid 2px; */
   margin-bottom: 1.5em;
 }
 .date-picker {
   border: aqua solid 2px;
 }
 .datepicker_container {
-  border: pink solid 2px;
+  /* border: pink solid 2px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1.5em;
 }
 .dropdown_Container {
-  border: red dotted 2px;
+  /* border: red dotted 2px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

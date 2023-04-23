@@ -45,7 +45,11 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" style={{ background: "blue" }}>
+    <AppBar
+      position="static"
+      /* color="success" */
+      style={{ border: "green solid 5px", color: "white" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src={logo} alt="logo" className={classes.logo} />
@@ -93,7 +97,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to={page.Link}>
+              <Link to={page.Link} style={{ textDecoration: "none" }}>
                 <Button
                   key={page.id}
                   onClick={handleCloseNavMenu}

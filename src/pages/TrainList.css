@@ -1,12 +1,13 @@
 .train-list {
-  border: green solid 2px;
+  /* border: green solid 2px; */
   margin: 2em;
 }
 .train-container {
-  border: goldenrod solid 2px;
+  border: goldenrod solid 4px;
   margin: 2em 0;
+  border-radius: 10px;
 }
 .btn {
-  /* border: aqua 20px solid; */
+  border: pink solid 3px;
   padding-left: 0.6em;
 }

@@ -26,12 +26,15 @@ export default function Card({ train }) {
         <div className={classes.train_info}>
           <div>
             <h4>
-              {train.depart_time}|{train.train_origin_station}
+              {train.from_sta}|{train.train_src}|{train.train_date}
             </h4>
           </div>
           <div>
+            <h4>--{train.duration}--</h4>
+          </div>
+          <div>
             <h4>
-              {train.arrival_time}|{train.train_destination_station}
+              {train.to_sta}|{train.train_dstn}
             </h4>
           </div>
         </div>
@@ -61,3 +64,60 @@ train_destination_station:"Mumbai"
 train_destination_station_code:"LTT"
     }
     */
+
+/* import React from "react";
+import classes from "./Card.module.css";
+import { Fragment } from "react";
+import Box from "@mui/material/Box";
+import { Button } from "react-bootstrap";
+export default function Card({ train }) {
+  return (
+    
+      <div className={classes.card_container}>
+        <div className={classes.card_header}>
+          <div>
+            <h4>
+              {train.train_name} ({train.train_number})
+            </h4>
+          </div>
+          <div>
+            <p>
+              Runs on:
+              {train.run_days.map((day) => {
+                return <span>{day} </span>;
+              })}
+            </p>
+          </div>
+          <h5 style={{ color: "blue" }}>Train Schedule</h5>
+        </div>
+        <div className={classes.train_info}>
+          <div>
+            <h4>
+              {train.from_sta}|{train.train_src}|{train.train_date}
+            </h4>
+          </div>
+          <div>
+            <h4>---{train.duration}--</h4>
+          <div>
+            <h4>
+              {train.to_sta}|{train.train_dstn}
+            </h4>
+          </div>
+        </div>{}
+        <div className={classes.train_class}>
+          {train.class_type.map((coach) => {
+            return <button className={classes.coach_container}>{coach}</button>;
+          })}
+        </div>
+      </div>
+        );
+        }
+
+        
+    
+  
+
+
+
+    
+ */
