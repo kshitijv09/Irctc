@@ -56,7 +56,7 @@ export default function PnrDetails({ details }) {
               return (
                 <div className="passenger-info">
                   <div className="passenger-detail" style={{ width: "33%" }}>
-                    {key}{" "}
+                    {key + 1}
                   </div>
 
                   <div className="passenger-detail" style={{ width: "33%" }}>

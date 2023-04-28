@@ -13,11 +13,11 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.jfif";
+import irctc from "../../assets/irctc.jfif";
+import classes from "./Navbar.module.css";
 
-const pages = [
-  { id: "2", name: "PNR Status", Link: "/pnr" },
-  { id: "3", name: "Station", Link: "/login" },
-];
+const pages = [{ id: "2", name: "PNR Status", Link: "/PNRStatus" }];
 /* const settings = ["Profile", "Account", "Dashboard", "Logout"]; */
 const settings = [
   { id: "1", title: "Profile", Link: "" },
@@ -45,28 +45,10 @@ function LoginNavBar(props) {
   };
 
   return (
-    <AppBar position="static" color="success">
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-              backgroundColor: "primary",
-            }}
-          >
-            LOGO
-          </Typography>
+          <img src={logo} alt="logo" className={classes.logo} />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -106,25 +88,7 @@ function LoginNavBar(props) {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Link to="/">
               <Button
@@ -151,7 +115,7 @@ function LoginNavBar(props) {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={irctc} />
               </IconButton>
             </Tooltip>
             <Menu

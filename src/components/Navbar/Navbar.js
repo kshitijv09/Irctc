@@ -21,7 +21,8 @@ import classes from "./Navbar.module.css";
 const pages = [
   { id: "1", name: "Login", Link: "/login" },
   { id: "2", name: "PNR Status", Link: "/PNRstatus" },
-  { id: "3", name: "Station", Link: "/login" },
+  /* { id: "3", name: "Station", Link: "/login" } */
+  ,
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 

@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate, Navigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import Login from "./LogIn";
+/* import Login from "./LogIn"; */
 
 const RetrieveInfo = () => {
   const { currentUser } = useAuth();
