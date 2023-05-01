@@ -2,7 +2,7 @@
   width: 50%;
   margin: 0.5em auto;
   padding: 2em 0;
-  border: goldenrod solid 2px;
+  /*  border: goldenrod solid 2px; */
   display: flex;
   justify-content: center;
 }

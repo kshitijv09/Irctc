@@ -7,6 +7,7 @@ import { db } from "../firebase";
 
 /* import Login from "./LogIn"; */
 import Bookings from "../components/Bookings/Bookings";
+import "../components/Bookings/Bookings.css";
 
 const RetrieveInfo = () => {
   const { currentUser } = useAuth();
@@ -30,17 +31,15 @@ const RetrieveInfo = () => {
   }, []);
 
   return (
-    <div class>
-      <div className="todo-content">
-        {console.log(train)}
-        {train.map((trainName, index) => (
-          <>
-            <Bookings details={trainName} />
-            {/* <p>{trainName.train_name}</p>
+    <div className="all-bookings">
+      {console.log(train)}
+      {train.map((trainName, index) => (
+        <>
+          <Bookings details={trainName} />
+          {/* <p>{trainName.train_name}</p>
             <p>{trainName.train_number} </p> */}
-          </>
-        ))}
-      </div>
+        </>
+      ))}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .container {
-  border: red solid 2px;
+  /* border: red solid 2px; */
   width: 60%;
   margin: auto;
 }
@@ -14,7 +14,7 @@
 }
 
 .info-container {
-  border: aqua solid 4px;
+  /* border: aqua solid 4px; */
   width: 70%;
   margin: auto;
 }
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: row;
   /* justify-content: space-around; */
-  border: green solid 2px;
+  /* border: green solid 2px; */
   margin: 2em 0;
 }
 .passenger-group {
@@ -64,7 +64,7 @@
 }
 .head {
   width: 100%;
-  border: red solid 2px;
+  /* border: red solid 2px; */
   background-color: rgb(51, 122, 183);
   color: white;
   margin-bottom: 10px;

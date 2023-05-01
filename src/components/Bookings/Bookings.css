@@ -1,0 +1,9 @@
+.book-container {
+  border: brown solid 4px;
+  margin: 2em auto;
+  border-radius: 20px;
+}
+.all-bookings {
+  width: 90%;
+  margin: auto;
+}

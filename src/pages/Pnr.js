@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import ResponsiveAppBar from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+import LoginNavBar from "../components/Navbar/LoginNavbar";
 import axios from "axios";
 import { TextField, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import PnrDetails from "../components/PnrDetails/PnrDetails";
 import "./Pnr.css";
 
+import { useAuth } from "../context/AuthContext";
+
 export default function Pnr() {
+  const { currentUser } = useAuth();
+
   const [num, enterNum] = useState("");
   const [PNR, setPNR] = useState("4147107547");
   const [details, setPNRdetails] = useState(null);
@@ -46,7 +51,8 @@ export default function Pnr() {
 
   return (
     <div>
-      <ResponsiveAppBar />
+      {!currentUser && <Navbar />}
+      {currentUser && <LoginNavBar />}
       <form onSubmit={submitHandler} className="input-container">
         <TextField
           className="input"
