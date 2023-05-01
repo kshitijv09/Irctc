@@ -62,8 +62,6 @@ export default function TrainList() {
 
   //const { fromStation, toStation } = useStation();
 
-  const [train, setTrain] = useState("Utsarg");
-
   const location = useLocation();
   const fromStation = location.state.fromS;
   const toStation = location.state.toS;
@@ -109,24 +107,23 @@ export default function TrainList() {
     trainDetails();
   }, []);
 
-  /*  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response.data);
-      setTrainData(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    }); */
-
   const dataStoreHandler = async (TrainData) => {
     //event.preventDefault();
+    console.log(TrainData);
 
     try {
       //console.log(currentUser.email);
       const docRef = await addDoc(collection(db, `${currentUser.email}`), {
-        TrainName: TrainData.train_name,
-        TrainNumber: TrainData.train_number,
+        train_name: TrainData.train_name,
+        train_number: TrainData.train_number,
+        run_days: TrainData.run_days,
+        from_sta: TrainData.from_sta,
+        train_src: TrainData.train_src,
+        train_date: TrainData.train_date,
+        duration: TrainData.duration,
+        to_sta: TrainData.to_sta,
+        train_dstn: TrainData.train_dstn,
+        class_type: TrainData.class_type,
       });
       //console.log("Document written with ID: ", docRef.id);
     } catch (e) {

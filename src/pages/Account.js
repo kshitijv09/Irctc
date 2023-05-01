@@ -4,7 +4,9 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate, Navigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+
 /* import Login from "./LogIn"; */
+import Bookings from "../components/Bookings/Bookings";
 
 const RetrieveInfo = () => {
   const { currentUser } = useAuth();
@@ -18,7 +20,7 @@ const RetrieveInfo = () => {
           id: doc.id,
         }));
         setTrain(newData);
-        console.log(train, newData);
+        //console.log(train);
       }
     );
   };
@@ -28,12 +30,14 @@ const RetrieveInfo = () => {
   }, []);
 
   return (
-    <div>
+    <div class>
       <div className="todo-content">
-        {train?.map((trainName, i) => (
+        {console.log(train)}
+        {train.map((trainName, index) => (
           <>
-            <p key={i}>{trainName.TrainName}</p>
-            <p>{trainName.TrainNumber} </p>
+            <Bookings details={trainName} />
+            {/* <p>{trainName.train_name}</p>
+            <p>{trainName.train_number} </p> */}
           </>
         ))}
       </div>
