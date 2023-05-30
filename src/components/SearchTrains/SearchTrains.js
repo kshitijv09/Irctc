@@ -93,6 +93,7 @@ export default function SearchTrains() {
                   <Button
                     type="submit"
                     variant="contained"
+                    disabled={!ArrivalStation || !DestinationStation}
                     style={{ backgroundColor: "#fb792b" }}
                   >
                     Search

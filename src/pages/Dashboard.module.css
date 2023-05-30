@@ -7,3 +7,9 @@
   left: 0;
   width: 100%;
 }
+.welcome {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.8em;
+  margin-bottom: 0px;
+}

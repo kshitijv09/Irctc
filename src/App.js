@@ -1,12 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//import AuthProvider from "./store/AuthProvider";
 import { AuthProvider } from "./context/AuthContext";
-import { StationProvider } from "./context/StationContext";
 
-import { Loader as trainlistLoader } from "./pages/TrainList";
 import SignUp from "./pages/SignUp";
 import Home from "./components/Home/Home";
-import LogIn from "./pages/LogIn";
+import LogIn from "./pages/LogIn.js";
 import Pnr from "./pages/Pnr";
 import TrainList from "./pages/TrainList";
 import Dashboard from "./pages/Dashboard";
@@ -23,7 +20,6 @@ function App() {
     {
       path: "/trainlist",
       element: <TrainList />,
-      /* loader: trainlistLoader, */
     },
     {
       path: "/dashboard",
@@ -50,24 +46,3 @@ function App() {
 }
 
 export default App;
-
-/*
-
- Pages
- 1- SignUp
- 2- List of trains and booking
- 3- Dashboard, Signup+Logout+AccountDetailsOption
- 4- Login Modal
- 5- Account/Booking Details
- 6- PNR Status
- 7- Station Code from id
- 
- Upon Authentication:
- 1- Book Tickets
- Components
- 1- NavBar
- 
- Component Styling:
- 1- HomePage
- 2-
-*/

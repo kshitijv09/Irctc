@@ -1,5 +1,4 @@
 .train-list {
-  /* border: green solid 2px; */
   margin: 2em;
 }
 .train-container {
@@ -10,4 +9,38 @@
 .btn {
   border: pink solid 3px;
   padding-left: 0.6em;
+}
+.no-train {
+  width: 50%;
+  margin: 8em auto;
+
+  color: red;
+  font-weight: 200;
+}
+.no-train h1 {
+  text-align: center;
+}
+
+.blink {
+  color: red;
+  padding: 10px;
+  border-radius: 5px;
+  animation: blinkingBackground 2s infinite;
+}
+@keyframes blinkingBackground {
+  0% {
+    background-color: #10c018;
+  }
+  25% {
+    background-color: black;
+  }
+  50% {
+    background-color: yellow;
+  }
+  75% {
+    background-color: #254878;
+  }
+  100% {
+    background-color: #04a1d5;
+  }
 }

@@ -12,8 +12,9 @@ import SearchTrains from "../components/SearchTrains/SearchTrains";
 export default function Dashboard() {
   const navigate = useNavigate();
   const { currentUser, logout } = useAuth();
+
   if (!currentUser) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" />; // If user is not logged in return to given URL
   }
 
   console.log(currentUser);
@@ -33,8 +34,8 @@ export default function Dashboard() {
         style={{ backgroundImage: `url(${railwaybkg})` }}
       >
         <LoginNavBar onClick={handleLogout} />
-        <div className="p-4 box mt-3 text-center">
-          Hello Welcome <br />
+        <div className={classes.welcome}>
+          Hello Welcome, <br />
           {currentUser && currentUser.email}
         </div>
         <SearchTrains />

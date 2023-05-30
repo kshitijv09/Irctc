@@ -29,25 +29,6 @@ export default function Signup() {
     setLoading(false);
   };
 
-  /* async function handleSubmit(e) {
-    e.preventDefault();
-
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Passwords do not match");
-    }
-
-    try {
-      setError("");
-      setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
-      Navigate.push("/");
-    } catch {
-      setError("Failed to create an account");
-    }
-
-    setLoading(false);
-  } */
-
   return (
     <>
       <Modal>

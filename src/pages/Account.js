@@ -5,7 +5,6 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
-/* import Login from "./LogIn"; */
 import Bookings from "../components/Bookings/Bookings";
 import "../components/Bookings/Bookings.css";
 
@@ -32,12 +31,13 @@ const RetrieveInfo = () => {
 
   return (
     <div className="all-bookings">
-      {console.log(train)}
+      <h1 style={{ textAlign: "center" }}>
+        {currentUser.email} || Your Bookings
+      </h1>
+
       {train.map((trainName, index) => (
         <>
           <Bookings details={trainName} />
-          {/* <p>{trainName.train_name}</p>
-            <p>{trainName.train_number} </p> */}
         </>
       ))}
     </div>
