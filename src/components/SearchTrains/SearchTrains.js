@@ -101,8 +101,6 @@ export default function SearchTrains() {
                 </div>
               </form>
             </div>
-
-            {/* <DatePicker label="Basic date picker" /> */}
           </div>
         </HomeBox>
 

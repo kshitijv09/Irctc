@@ -47,3 +47,6 @@
 .coach_container :focus {
   border: black solid 2px;
 }
+.add {
+  border: goldenrod solid 2px;
+}

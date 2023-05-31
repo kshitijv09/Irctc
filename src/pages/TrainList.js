@@ -113,6 +113,7 @@ export default function TrainList() {
                         );
                       }}
                       style={{ backgroundColor: "orange" }}
+                      disabled={!currentUser}
                     >
                       Book
                     </Button>

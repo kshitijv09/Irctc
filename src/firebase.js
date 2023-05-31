@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB6hQkbSegrci4KgfAw-ZKRCDco8vb4gYI",
-  authDomain: "railways-6f819.firebaseapp.com",
-  projectId: "railways-6f819",
-  storageBucket: "railways-6f819.appspot.com",
-  messagingSenderId: "235530137036",
-  appId: "1:235530137036:web:75d01747af923a5275c169",
+  apiKey: `${process.env.REACT_APP_APIKEY}`,
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 // Initialize Firebase

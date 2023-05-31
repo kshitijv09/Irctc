@@ -3,11 +3,7 @@ import { auth } from "../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
   signOut,
-  GoogleAuthProvider,
-  signInWithPopup,
-  sendPasswordResetEmail,
 } from "firebase/auth";
 
 const AuthContext = React.createContext();
@@ -32,18 +28,6 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
-  function resetPassword(email) {
-    return sendPasswordResetEmail(email);
-  }
-
-  function updateEmail(email) {
-    return currentUser.updateEmail(email);
-  }
-
-  function updatePassword(password) {
-    return currentUser.updatePassword(password);
-  }
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -58,9 +42,6 @@ export function AuthProvider({ children }) {
     login,
     signup,
     logout,
-    resetPassword,
-    updateEmail,
-    updatePassword,
   };
 
   return (
