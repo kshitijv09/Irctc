@@ -40,7 +40,7 @@ export default function SearchTrains() {
                   <div>
                     <TextField
                       id="outlined-basic"
-                      label="From"
+                      label="From Station Code"
                       variant="outlined"
                       inputProps={{
                         style: {
@@ -71,7 +71,7 @@ export default function SearchTrains() {
                   <div>
                     <TextField
                       id="outlined-basic"
-                      label="To"
+                      label="To Station Code"
                       variant="outlined"
                       inputProps={{
                         style: {

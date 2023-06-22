@@ -18,7 +18,7 @@ import irctc from "../../assets/irctc.jfif";
 import classes from "./Navbar.module.css";
 
 const pages = [{ id: "2", name: "PNR Status", Link: "/PNRStatus" }];
-/* const settings = ["Profile", "Account", "Dashboard", "Logout"]; */
+
 const settings = [
   { id: "1", title: "Profile", Link: "" },
   { id: "2", title: "Account", Link: "/account" },

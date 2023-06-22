@@ -79,7 +79,7 @@ export default function TrainList() {
       console.error("Error adding document: ", e);
     }
   };
-  if (trainData.data.length == 0) {
+  /* if (trainData.data.length == 0) {
     return (
       <div>
         {!currentUser && <Navbar />}
@@ -91,39 +91,38 @@ export default function TrainList() {
         </div>
       </div>
     );
-  } else {
-    return (
-      <div>
-        {!currentUser && <Navbar />}
-        {currentUser && <LoginNavBar />}
-        {
-          <div className="train-list">
-            {trainData.data.map((train) => {
-              return (
-                <div className="train-container">
-                  <Box>
-                    <Card train={train} />
-                  </Box>
-                  <div className="btn">
-                    <Button
-                      onClick={() => {
-                        dataStoreHandler(train);
-                        alert(
-                          "Your reservation has been made. You can check reservation details in Account Section"
-                        );
-                      }}
-                      style={{ backgroundColor: "orange" }}
-                      disabled={!currentUser}
-                    >
-                      Book
-                    </Button>
-                  </div>
+  } */
+  return (
+    <div>
+      {!currentUser && <Navbar />}
+      {currentUser && <LoginNavBar />}
+      {
+        <div className="train-list">
+          {trainData.data.map((train) => {
+            return (
+              <div className="train-container">
+                <Box>
+                  <Card train={train} />
+                </Box>
+                <div className="btn">
+                  <Button
+                    onClick={() => {
+                      dataStoreHandler(train);
+                      alert(
+                        "Your reservation has been made. You can check reservation details in Account Section"
+                      );
+                    }}
+                    style={{ backgroundColor: "orange" }}
+                    disabled={!currentUser}
+                  >
+                    Book
+                  </Button>
                 </div>
-              );
-            })}
-          </div>
-        }
-      </div>
-    );
-  }
+              </div>
+            );
+          })}
+        </div>
+      }
+    </div>
+  );
 }
